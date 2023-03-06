@@ -6,6 +6,8 @@ import IconPlus from '../atoms/Icons/Stroke/IconPlus';
 import IconRoles from '../atoms/Icons/Stroke/IconRoles';
 import IconUsers from '../atoms/Icons/Stroke/IconUsers';
 import IconViewList from '../atoms/Icons/Stroke/IconViewList';
+import IconCategories from '../atoms/Icons/Stroke/IconCategories';
+import IconProducts from '../atoms/Icons/Stroke/IconProducts';
 import { permissions } from './permissions';
 
 
@@ -155,6 +157,72 @@ export const dashRoutes = [
                 showItem: false,
                 icon: IconPencilAlt,
                 permission: permissions.ROLES.UPDATE,
+            },
+        ],
+    },
+    {
+        path: '/categories',
+        name: 'c_categories',
+        icon: IconCategories,
+        showItem: true,
+        permission: permissions.CATEGORIES.LIST,
+        children: [
+            {
+                path: '/',
+                component: lazy( () => import( '../pages/categories' ) ),
+                name: 'a_list',
+                icon: IconViewList,
+                showItem: true,
+                permission: permissions.CATEGORIES.LIST,
+            },
+            {
+                path: '/create',
+                component: lazy( () => import( '../pages/categories/create' ) ),
+                name: 'a_create',
+                icon: IconPlus,
+                showItem: true,
+                permission: permissions.CATEGORIES.SAVE,
+            },
+            {
+                path: '/:id/update',
+                component: lazy( () => import( '../pages/categories/update' ) ),
+                name: 'c_update',
+                showItem: false,
+                icon: IconPencilAlt,
+                permission: permissions.CATEGORIES.UPDATE,
+            },
+        ],
+    },
+    {
+        path: '/products',
+        name: 'p_products',
+        icon: IconProducts,
+        showItem: true,
+        permission: permissions.PRODUCTS.LIST,
+        children: [
+            {
+                path: '/',
+                component: lazy( () => import( '../pages/products' ) ),
+                name: 'a_list',
+                icon: IconViewList,
+                showItem: true,
+                permission: permissions.PRODUCTS.LIST,
+            },
+            {
+                path: '/create',
+                component: lazy( () => import( '../pages/products/create' ) ),
+                name: 'a_create',
+                icon: IconPlus,
+                showItem: true,
+                permission: permissions.PRODUCTS.SAVE,
+            },
+            {
+                path: '/:id/update',
+                component: lazy( () => import( '../pages/products/update' ) ),
+                name: 'p_update',
+                icon: IconPencilAlt,
+                showItem: false,
+                permission: permissions.PRODUCTS.UPDATE,
             },
         ],
     },

@@ -116,35 +116,53 @@
         "usersChangeMyPassword",
         "usersChangeUserPassword"
       ]
+    },
+    {
+      "group": "CATEGORIES",
+      "permissions": [
+        "categoriesSave",
+        "categoriesUpdate",
+        "categoriesShow",
+        "categoriesList",
+        "categoriesDelete"
+      ]
+    },
+    {
+      "group": "PRODUCTS",
+      "permissions": [
+        "productsSave",
+        "productsUpdate",
+        "productsShow",
+        "productsList",
+        "productsDelete"
+      ]
     }
   ],
-  "roles": [
+  "roles": [],
+  "categories": [
     {
-      "permissions": [
-        "authSyncPermissions"
-      ],
-      "name": "Role",
-      "slug": "role",
+      "title": "Sport",
       "enable": true,
-      "id": "5db96817-33c8-446d-8050-830c4d88f26d"
+      "id": 1
     },
     {
-      "permissions": [],
-      "name": "Void Permissions",
-      "slug": "",
-      "enable": true,
-      "id": "dfdsa"
+      "title": "Drinks",
+      "enable": false,
+      "id": 2
     },
     {
-      "permissions": [
-        "getPermissions",
-        "filesUpload",
-        "filesUpdate"
-      ],
-      "name": "Admin",
-      "slug": "admin",
+      "title": "Merch",
+      "enable": false,
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "title": "Water",
+      "price": 150,
       "enable": true,
-      "id": "FotmTfY"
+      "category": "Drinks",
+      "id": 1
     }
   ],
   "refresh-token": {

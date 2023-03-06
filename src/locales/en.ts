@@ -26,6 +26,8 @@ const app: I18nLocales = {
     a_enter_permissions: 'Select Permissions',
     a_enter_phone: 'Enter Number',
     a_enter_slug: 'Enter Slug',
+    a_enter_title: 'Enter Title',
+    a_enter_price: 'Enter Price',
     a_do_not_have_account: 'Do you have an account?',
     a_es: 'Spanish',
     a_filter_by: 'Filter by',
@@ -50,6 +52,8 @@ const app: I18nLocales = {
     a_select_country: 'Select Country',
     a_select_enable: 'Select State',
     a_select_roles: 'Select Roles',
+    a_select_category: 'Select Category',
+    a_select_product: 'Select Product',
     a_send: 'Send',
     a_sign_up: 'Sign Up',
     a_submitting: 'Submitting',
@@ -124,11 +128,17 @@ const errors: I18nLocales = {
     'err_login': 'Error at login',
     'err_process_role': 'Error to process roles',
     'err_process_user': 'Error to process users',
+    'err_process_category': 'Error to process categories',
+    'err_process_product': 'Error to process products',
     'err_remove_role': 'Error at remove the role',
     'err_remove_user': 'Error at remove the user',
+    'err_remove_category': 'Error at remove the category',
+    'err_remove_product': 'Error at remove the product',
     'err_save_password': 'Error at save password',
     'err_save_role': 'Error at save role',
     'err_save_user': 'Error at save user',
+    'err_save_category': 'Error at save category',
+    'err_save_product': 'Error at save product',
     'err_save': 'Error at save',
     'err_server': 'Error at server',
     'err_view': 'Error at load view',
@@ -144,6 +154,7 @@ const errors: I18nLocales = {
 const properties: I18nLocales = {
     address: 'Address',
     birthday: 'Birthday',
+    category: 'Category',
     confirm_password: 'Confirm Password',
     country: 'Country',
     document_number: 'document number',
@@ -158,8 +169,10 @@ const properties: I18nLocales = {
     password: 'Password',
     permissions: 'Permissions',
     phone: 'Phone',
+    price: 'Price',
     roles: 'Roles',
     slug: 'Slug',
+    title: 'Title',
     type_id: 'Type',
 
 };
@@ -192,6 +205,30 @@ const user: I18nLocales = {
     u_view: 'Show User',
 };
 
+const products: I18nLocales = {
+    p_products: 'Products',
+    p_update: 'Update Product',
+    p_updated: 'Product Updated',
+    p_remove: 'Are you sure you want to delete this product?',
+    p_removed: 'The product was removed',
+    p_list: 'Product List',
+    p_create: 'Create Product',
+    p_created: 'Created Product',
+    p_no_products: 'Without Products',
+};
+
+const categories: I18nLocales = {
+    c_categories: 'Categories',
+    c_update: 'Update Category',
+    c_updated: 'Category Updated',
+    c_create: 'Create Category',
+    c_created: 'Created Category',
+    c_remove: 'Are you sure you want to delete this category?',
+    c_removed: 'The category was removed',
+    c_list: 'Category List',
+    c_no_categories: 'Without Categories',
+};
+
 const en: I18nLocales = {
     ...app,
     ...appValidations,
@@ -201,6 +238,8 @@ const en: I18nLocales = {
     ...properties,
     ...roles,
     ...user,
+    ...categories,
+    ...products,
 };
 
 export default en;

@@ -34,7 +34,7 @@ router.render = ( req, res ) =>
 };
 server.use( login );
 server.use( refreshToken );
-server.use( permissions )
+server.use( permissions );
 server.use( logout );
 server.use( forgotPassword );
 server.use( router );

@@ -1,19 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const jsonRepository = require( './jsonRepository' );
+const jsonRepository = require('./jsonRepository');
 
-module.exports = ( req, res, next ) =>
-{
-    if ( req.url === '/permissions' && req.method === 'POST' )
-    {
+module.exports = (req, res, next) => {
+    if (req.url === '/permissions' && req.method === 'POST') {
         const permissions = {
             data: [
                 {
                     group: 'AUTH',
-                    permissions: [
-                        'authSyncPermissions',
-                        'getPermissions',
-                    ],
+                    permissions: ['authSyncPermissions', 'getPermissions'],
                 },
                 {
                     group: 'USERS',
@@ -39,10 +34,28 @@ module.exports = ( req, res, next ) =>
                     ],
                 },
                 {
-                    group: 'OTHERS',
+                    group: 'CATEGORIES',
                     permissions: [
-                        'all',
+                        'categoriesSave',
+                        'categoriesUpdate',
+                        'categoriesShow',
+                        'categoriesList',
+                        'categoriesDelete',
                     ],
+                },
+                {
+                    group: 'PRODUCTS',
+                    permissions: [
+                        'productsSave',
+                        'productsUpdate',
+                        'productsShow',
+                        'productsList',
+                        'productsDelete',
+                    ],
+                },
+                {
+                    group: 'OTHERS',
+                    permissions: [ 'all' ],
                 },
             ],
         };
