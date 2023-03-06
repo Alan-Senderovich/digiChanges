@@ -5,7 +5,7 @@ import CategoryRepository from '../../../features/category/repositories/Category
 import PrivateLayout from '../../../features/shared/layout/PrivateLayout/PrivateLayout';
 import ProductRepository from '../../../features/product/repositories/ProductRepository';
 import ProductUpdate from '../../../features/product/templates/ProductUpdate/ProductUpdate';
-import { updateAction } from './handlers';
+import { updateAction } from './handler';
 import { useApplicationContext } from '../../../context/context';
 import { useParams } from 'solid-app-router';
 import usePermission from '../../../features/shared/hooks/usePermission';
